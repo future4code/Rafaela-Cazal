@@ -1,0 +1,5 @@
+Comandos mais usados:
+$ ls
+$ pwd 
+$ cd - e suas variações, como "cd .." ou só ".."
+Utilizei todos os comandos das pistas porém sinto que não avancei tanto quanto eu queria e pausei duas vezes. Após tentativas e mais tentativas eu suspeito de que seja Annabel Church, porém não cheguei até o final do desafio. 
