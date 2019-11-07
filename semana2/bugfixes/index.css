@@ -122,10 +122,13 @@ td button {
 
 td button:hover {
     background-color: #c4ad31;
+  
+
 }
 
 td button:active {
     background-color: #c44f00;
+   
 }
 
 .container-do-search {
@@ -142,17 +145,18 @@ td button:active {
 }
 
 #back-button {
-    background-color: white;
+    background-color: #fadf63;
     width: 100px;
     height: 20px;
     border: 1px solid black;
     border-radius: 5px;
     font-size: 10px;
     color: black;
+    font-family: 'Roboto', sans-serif;
 }
 
 #back-button:hover {
-    background-color: #635a3d
+    background-color: #c4ad31;
 }
 
 #campodebusca {
