@@ -152,3 +152,9 @@ td button:active {
 #back-button:hover {
     background-color: #635a3d
 }
+
+#campodebusca {
+    border: none; 
+    border-bottom: solid black 2px ; 
+
+}
