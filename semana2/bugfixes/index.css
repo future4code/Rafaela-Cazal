@@ -27,15 +27,15 @@ button:focus {
 }
 
 img {
-    width: 50px;
+    width: 18px;
 }
 
 div>p:first-child {
     display: inline;
 }
 
-div img {
-    width: 25px;
+table img {
+    width: 50px;
 }
 
 .botao-amarelo {
@@ -52,6 +52,7 @@ div img {
 .botao-amarelo:hover {
     background-color: #c44f00;
 }
+
 
 .container {
     height: 500px;
@@ -119,6 +120,10 @@ td button {
 
 td button:hover {
     background-color: #c4ad31;
+}
+
+td button:active {
+    background-color: #c44f00;
 }
 
 .container-do-search {
