@@ -1,0 +1,120 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.container {
+    background-color: rgb(255, 255, 255);
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-column-gap: 1px;
+    grid-template-rows: 1fr 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center; 
+}
+
+#itemB {
+    background-color: rgb(209, 30, 30);
+    height: 8vw;
+    grid-column-start: 1;
+    grid-column-end: span 5;
+    grid-row-start: 1;
+    grid-row-end: span 1;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+    
+
+#item1 {
+    background-color: rgb(0, 38, 209);
+    grid-column-start: 2;
+    grid-row-start: 2;
+    grid-column-end: span 2;
+    width: 20vw;
+    height: 10vw;
+    
+}
+
+
+#item2 {
+    background-color: rgb(238, 255, 0);
+    grid-column-start: 3;
+    grid-row-start: 2;
+    grid-column-end: span 3;
+    width: 20vw;
+    height: 10vw;
+}
+
+
+#item3 {
+    background-color: rgb(69, 187, 0);
+    grid-column-start: 4;
+    grid-row-start: 2;
+    grid-column-end: span 4;
+    width: 20vw;
+    height: 10vw;
+    
+}
+
+.item{
+    border: 1px solid black;
+   
+}
+
+
+#item4 {
+    background-color: rgb(0, 38, 209);
+    grid-column-start: 2;
+    grid-row-start: 3;
+    grid-column-end: span 2;
+    width: 20vw;
+    height: 10vw;
+}
+
+
+#item5 {
+    background-color: rgb(238, 255, 0);
+    grid-column-start: 3;
+    grid-row-start: 3;
+    grid-column-end: span 3;
+    width: 20vw;
+    height: 10vw;
+}
+
+
+#item6 {
+    background-color: rgb(69, 187, 0);
+    grid-column-start: 4;
+    grid-row-start: 3;
+    grid-column-end: span 4;
+    width: 20vw;
+    height: 10vw;
+}
+
+
+
+/* 
+#item7 {
+    background-color: black;
+    color: white;
+    grid-column-start: 2;
+    grid-row-start: 4;
+    grid-column-end: span 2 ;
+    width: 30vw;
+    height: 40vw;
+    
+}
+
+#item8 {
+    background-color: black;
+    color: white;
+    grid-column-start: 4;
+    grid-row-start: 4;
+    grid-column-end: span 5;
+    width: 30vw;
+    height: 40vw;
+    justify-content: center;
+    
+} */
