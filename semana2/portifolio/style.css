@@ -1,0 +1,93 @@
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Bitter', serif;
+            
+            
+        }
+        
+
+             
+        #barra {
+            background-color: #0E103D;
+            color: #F2EDF1;
+            text-align: center;
+            height: 20px;
+            justify-content: center;
+            padding: 13px;
+            justify-content: baseline;
+           -webkit-box-orient:vertical;
+           -webkit-box-direction:normal;
+           min-height:45px; 
+           padding: left 20px  top 10px right 20px;
+           -webkit-box-align:center;
+           -ms-flex-align:center;
+           align-items:center;
+           display:-webkit-box;
+           display:-ms-flexbox;
+           display:flex;
+           -webkit-box-pack:justify;
+           -ms-flex-pack:justify;
+           justify-content:space-between;
+        }
+        
+       body {
+
+        background: linear-gradient(to right, #3B306D 0%, #6688A5 100%);
+       } 
+
+        .banner {
+            height: 500px;
+            width: auto;
+            border: none;
+            border-bottom: #0E103D solid 5px;
+        }
+        
+        .banner-content {
+            text-align: justify;
+            padding: 60px;
+            color: whitesmoke;
+        }
+        
+        .botoes {
+            color: whitesmoke;
+            text-align: center;
+            padding-bottom: 18px;
+            justify-content: center;
+            padding-top: 30px;
+        }
+
+
+        #insta {
+            padding-top: 20px;
+            padding-bottom: 35px;
+            text-align: center;
+            color: whitesmoke;
+        }
+        
+        button {
+            background-color: #3B306D;
+            border: none;
+            border-radius: 30px;
+            color: whitesmoke;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        footer {
+            color: #F2EDF1;
+            background-color: #0E103D;
+            height: 15px;
+            text-align: center;
+            padding: 10px;
+            opacity : 0.8 
+        }
