@@ -13,13 +13,14 @@
     margin: 5px;
 }
 
-#titulo{
+header{
     background-color: #fe7e02;
     grid-column: span 6;
     grid-row: 1;
     padding: 25px;
     color: whitesmoke;
     font-size: 25px;
+    align-items: right;
 }
 
 
