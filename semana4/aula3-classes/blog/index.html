@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Blog</title>
+</head>
+
+<body onkeydown="onKeyDown(event)">
+
+    <main>
+        <h2> Formulário de postagem </h2>
+        
+        <div id="container"> 
+                <label for="input-tema"> Tema: </label>
+                <input id="input-tema"></input>
+
+            <label for="input-titulo"> Título: </label>
+            <input id="input-titulo"></input>
+
+            <label for="input-autor"> Autor: </label>
+            <input id="input-autor"></input>
+
+            <label for="input-conteudo"> Conteúdo: </label>
+            <textarea id="input-conteudo"></textarea>
+
+        <button onclick="aoCriar()" for="formulario" id="botao-criar-post"> Criar Post</button>
+    </div>
+    </main>
+
+</body>
+</html>
