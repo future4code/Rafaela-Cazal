@@ -4,32 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
     <title>Blog</title>
 </head>
-
-<body onkeydown="onKeyDown(event)">
-
+<body>
     <main>
-        <h2> Formulário de postagem </h2>
-        
-        <div id="container"> 
-                <label for="input-tema"> Tema: </label>
-                <input id="input-tema"></input>
-
-            <label for="input-titulo"> Título: </label>
-            <input id="input-titulo"></input>
-
-            <label for="input-autor"> Autor: </label>
-            <input id="input-autor"></input>
-
-            <label for="input-conteudo"> Conteúdo: </label>
-            <textarea id="input-conteudo"></textarea>
-
-        <button onclick="aoCriar()" for="formulario" id="botao-criar-post"> Criar Post</button>
-    </div>
+            <h2>Criando postagem! Crie seu post abaixo.</h2>
+        <section>
+           
+            <label for="titulo">Titulo: </label>
+            <input type="text" id="titulo">
+            <label for="autor">Autor: </label>
+            <input type="text" id="autor">
+            <label for="conteudo">Conteúdo: </label>
+            <input type="text" id="conteudo">
+            <button> Criar post </button>
+            <button onclick="aoClicar()" id="bota-criar" > Criar post </button>
+        </section>
     </main>
-
 </body>
-</html>
