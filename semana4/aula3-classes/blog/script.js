@@ -17,4 +17,3 @@ function aoClicar(){
   console.log(titulo,autor,conteudo)
 
 } 
- 
