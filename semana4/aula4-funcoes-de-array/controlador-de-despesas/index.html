@@ -15,21 +15,21 @@
                 <h2>Controlador de Despesas</h2>
                 <h3>Cadastrar despesa</h3>
                 <label for="valor">Valor (R$) </label>
-                <input id="valor" type="text">
+                <input id="valor-despesa" type="text">
 
-                <label >Tipo de Despesa </label>
-                <select class="dropdown">
+                <label for="seleciona-despesa">Tipo de Despesa </label>
+                <select id="seleciona-despesa" class="dropdown">
                         <option value="casa"> Casa</option>
                         <option value="viagem"> Viagem</option>
                         <option value="alimentação"> Alimentação</option>
                 </select>
 
                 <label for="descricao">Descrição </label>
-                <input id="descricao" type="text">
+                <input id="descricao-despesa" type="text">
 
-                <button id="botao-cadastro-despesa" >Cadastrar Despesa </button>
+                <button onclick="cadastrarDespesa()" id="botao-cadastro-despesa" >Cadastrar Despesa! </button>
             </form>
-
+<!-- 
             <form id="despesas-detalhadas">
                     <h2>Despesas detalhadas</h2>
                     <label >Tipo de Despesa </label>
@@ -46,7 +46,7 @@
 
                     <button id="botao-cadastro-despesa" >Cadastrar Despesa </button>
                 </form>
-
+ -->
 
         </section>
     </main>
