@@ -1,36 +1,38 @@
 
-arrayFour = [
-    { nome: "Darvas", idade: 20 },
-    { nome: "Goli", idade: 10 },
-    { nome: "Paulinha", idade: 12 },
-    { nome: "Artur", idade: 89 },
-    { nome: "Soter", idade: 55 },
-    { nome: "Miau", idade: 1 },
-    { nome: "Lu", idade: 32 }
-]
+// exercicio 1
 
-// a. maiores de 20
+// arrayFour = [
+//     { nome: "Darvas", idade: 20 },
+//     { nome: "Goli", idade: 10 },
+//     { nome: "Paulinha", idade: 12 },
+//     { nome: "Artur", idade: 89 },
+//     { nome: "Soter", idade: 55 },
+//     { nome: "Miau", idade: 1 },
+//     { nome: "Lu", idade: 32 }
+// ]
 
-function soadultos(arrayFour){
+// // a. maiores de 20
 
-    let novoArray = arrayFour.filter((item) => {
-        return item.idade >= 20
-    })
+// function soadultos(arrayFour){
 
-    console.log(novoArray)
-}
+//     let novoArray = arrayFour.filter((item) => {
+//         return item.idade >= 20
+//     })
 
-soadultos(arrayFour)
+//     console.log(novoArray)
+// }
 
-//  b. menores de 20
+// soadultos(arrayFour)
 
-function socrianca(arrayFour){
+// //  b. menores de 20
 
-    let arrayCrianca = arrayFour.filter((item) => {
-        return item.idade <= 20
-    })
+// function socrianca(arrayFour){
 
-    console.log(arrayCrianca)
-}
+//     let arrayCrianca = arrayFour.filter((item) => {
+//         return item.idade <= 20
+//     })
 
-socrianca(arrayFour)
+//     console.log(arrayCrianca)
+// }
+
+// socrianca(arrayFour)
