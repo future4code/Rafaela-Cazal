@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <script src="index.js" defer ></script>
+   <link rel="stylesheet" href="style.css">
+    <title> Controlador de despesas</title>
+</head>
+<body>
+    <main>
+        <section>
+            <form id="formulario-despesas">
+                <h2>Controlador de Despesas</h2>
+                <h3>Cadastrar despesa</h3>
+                <label for="valor">Valor (R$) </label>
+                <input id="valor-despesa" type="text">
+
+                <label for="seleciona-despesa">Tipo de Despesa </label>
+                <select id="seleciona-despesa" class="dropdown">
+                        <option value="casa"> Casa</option>
+                        <option value="viagem"> Viagem</option>
+                        <option value="alimentação"> Alimentação</option>
+                </select>
+
+                <label for="descricao">Descrição </label>
+                <input id="descricao-despesa" type="text">
+
+                <button onclick="cadastrarDespesa()" id="botao-cadastro-despesa" >Cadastrar Despesa! </button>
+            </form>
+<!-- 
+            <form id="despesas-detalhadas">
+                    <h2>Despesas detalhadas</h2>
+                    <label >Tipo de Despesa </label>
+    
+                    <select class="dropdown">
+                            <option value="casa"> Casa</option>
+                            <option value="viagem"> Viagem</option>
+                            <option value="alimentação"> Alimentação</option>
+                    </select>
+                    <label for="valor-min">Valor Mínimo</label>
+                    <input id="valor-min" type="text">
+                    <label for="valor-max">Valor Maximo </label>
+                    <input id="valor-max" type="text">
+
+                    <button id="botao-cadastro-despesa" >Cadastrar Despesa </button>
+                </form>
+ -->
+
+        </section>
+    </main>
+</body>
+</html>
