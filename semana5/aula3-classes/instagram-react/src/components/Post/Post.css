@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+ }
+
+ h2{
+     text-align: center;
+     margin-top: 25px;
+ }
+
+ 
+ .post-container {
+    text-align: center;
+    border: 1px solid lightgrey;
+    width: 300px;
+    margin-left: 38vw ;
+    margin-top: 40px;
+    margin-bottom: 20px;
+ }
+ 
+ .post-container p {
+    padding: 10px;
+    text-align: left;
+    margin-left: 20px;
+    font-weight: bold;
+ }
+ 
+ .post-container img {
+    width: 100%;
+ }
+ 
+ .icone-fav {
+    width: 20px;
+    height: 23px;
+ }
+ 
+ .icone-coment {
+    width: 20px;
+    height: 23px;
+ }
+ 
