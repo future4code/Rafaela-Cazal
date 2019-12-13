@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import styled from "styled-components";
 import BoredGroup from "./components/BoredGroup";
-import BoredAlone from "./components/BoredAlone";
+import BoredAlone from "./components/BoredAlone/index";
 
 const BotaoPrincipal = styled.button`
   text-align: center;
@@ -13,6 +13,7 @@ const BotaoPrincipal = styled.button`
   color: white;
   paddin: 10px;
   margin-left: 30px;
+  margin-top:20px;
   background-color: #202d63;
 `;
 
@@ -40,7 +41,6 @@ export default class App extends Component {
 
     return (
       <div className="App">
-        <h1>oi</h1>
         <BotaoPrincipal onClick={this.handleChangePage}>
           {buttonText}
         </BotaoPrincipal>
