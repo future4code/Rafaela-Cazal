@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import styled from 'styled-components';
 
+const BotaoDelete = styled.button`
+color: black;
+border-radius: 30%;
+background-color: #F77F00;
+`
 const baseURL = "https://us-central1-spotif4.cloudfunctions.net/api";
 
 export default class DeletePlaylistItem extends Component {  
@@ -25,7 +31,7 @@ export default class DeletePlaylistItem extends Component {
          <div>
             <li>
                {this.props.lista.name} {" "}
-               <button onClick={this.aoClicarDelete}>X</button>
+               <BotaoDelete onClick={this.aoClicarDelete}>X</BotaoDelete>
             </li>
          </div>
       )

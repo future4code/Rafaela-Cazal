@@ -6,6 +6,17 @@ import DeletePlaylistItem from '../DeletePlaylistItem';
 const baseURL = "https://us-central1-spotif4.cloudfunctions.net/api";
 const token = "rafacazal"
 
+const PlaylistContainer = styled.div`
+margin-top:45px;
+padding: 4px;
+margin-bottom: 20px;
+margin-left: 30px;
+`
+const H2Playlist = styled.h2`
+margin-bottom: 10px;
+
+`
+
 export default class GetAllPlaylists extends React.Component {
    constructor(props) {
       super(props);
@@ -39,11 +50,11 @@ export default class GetAllPlaylists extends React.Component {
 
    render() {
       return (
-         <div>
-            <h3>Playlists Criadas</h3>
+         <PlaylistContainer>
+            <H2Playlist>Playlists Criadas</H2Playlist>
             {this.state.playlists.map(name => (<DeletePlaylistItem lista={name} onClickDelete={this.getAllPlaylist}/>
             ))}
-         </div>
+         </PlaylistContainer>
       );
    }
 }
