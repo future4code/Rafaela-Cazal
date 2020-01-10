@@ -6,3 +6,17 @@ export const criarTarefa = (tarefa) => ({
         tarefa,
     }
 });
+
+export const marcarTarefaComoCompleta = (tarefaId) => ({
+    type: "MARCAR_TAREFA_COMO_COMPLETA",
+    payload: {
+        tarefaId,
+    }
+});
+
+export const apagarTarefa = (tarefaId) => ({
+    type: "APAGAR_TAREFA",
+    payload: {
+        tarefaId,
+    }
+});

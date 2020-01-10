@@ -1,12 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import TarefaItem from './TarefaItem';
+import TarefaItem from '../TarefaItem';
 
 const ListadeTarefas = (props) => {
     return (
         <ul>
             {
-                props.todasAsTarefas.map((tarefa) => ( <TarefaItem tarefa={tarefa} /> ))
+                props.todasAsTarefas.map((tarefa) => ( <TarefaItem key={tarefa.id} tarefa={tarefa}/>))
             }
         </ul>
     )

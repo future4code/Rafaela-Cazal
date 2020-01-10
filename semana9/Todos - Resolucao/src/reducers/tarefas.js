@@ -1,12 +1,6 @@
 // definir o estado inicial 
 const initalState = {
-    todasAsTarefas: [
-    {
-        id: 0,
-        texto: "Comprar laranjas",
-        completa: false
-    }
-    ],
+    todasAsTarefas: [],
 }
 
 const tarefas = ( state = initalState, action ) => {
@@ -19,6 +13,27 @@ const tarefas = ( state = initalState, action ) => {
 
             // retorna o estado novo 
             return { ...state, todasAsTarefas: todasAsTarefasAtualizadas }
+
+        case "MARCAR_TAREFA_COMO_COMPLETA": {
+            const tarefasAtualizadas = state.todasAsTarefas.map((tarefa) => {
+            if(tarefa.id === action.payload.tarefaId) { 
+                return { ...tarefa,
+                    completa: !tarefa.completa 
+                };
+            }
+            return tarefa;
+        });
+
+        return {...state, todasAsTarefas: tarefasAtualizadas };
+    }
+        case "APAGAR_TAREFA": {
+            const tarefasAtualizadas = state.todasAsTarefas.filter((tarefa) => {
+                return tarefa.id !== action.payload.tarefaId;
+            });
+
+            return {...state, todasAsTarefas: tarefasAtualizadas };
+        }
+
         default: 
             return state;
     }
