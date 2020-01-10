@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import TarefaItem from '../TarefaItem';
+import TarefaItem from './TarefaItem';
 
 const ListadeTarefas = (props) => {
     return (
