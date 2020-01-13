@@ -22,6 +22,8 @@ class UserSwipeCard extends Component {
   render() {
     const { userToSwipe, animationDirection: animation } = this.props
 
+    console.log(userToSwipe)
+
     return (
       <UserCardWrapper animation={animation}>
         <BlurredBackground photo={userToSwipe.photo}/>
