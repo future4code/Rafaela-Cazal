@@ -3,25 +3,45 @@ import Button from "@material-ui/core/Button";
 import styled from "styled-components";
 import { connect } from "react-redux";
 import { push } from "connected-react-router";
-import { routes } from '../Router/index'
+import { routes } from '../Router/index';
+import { getTrips } from '../../actions/tripsAction'
+import { render } from "react-dom";
 
-const ListTripsPage= props => {
-        return (
+class ListTripsPage extends React.Component {
+
+
+  componentDidMount(){
+    this.props.fetchTrips()
+  }
+
+  render(){
+    console.log(this.props.trips)
+    return (
             <div>
-               <h1>todas as viagens</h1>
-            <Button onClick={props.goToTripsDetails}>Trips Details</Button> 
+            <h1>todas as viagens</h1>
+            {this.props.trips.map((trip)  =>(
+            <div> 
+            <li>{trip.name}</li>
+            </div>))}
+            <Button onClick={this.props.goToTripDetails}>Trips Details</Button> 
             </div>
-
-        );
-
+            );
+     }
 };
 
-function mapDispatchToProps(dispatch) {
-    return {
-      goToTripsDetails: () => dispatch(push(routes.tripsDetails)),
-    }
-
+const mapStateToProps = state => ({
+trips: state.trips.allTrips
 
 }
 
-export default connect(null, mapDispatchToProps)(ListTripsPage) 
+);
+
+function mapDispatchToProps(dispatch) {
+  return {
+    goToTripDetails: () => dispatch(push(routes.tripsDetails)),
+    fetchTrips: () => dispatch(getTrips())
+  }
+
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ListTripsPage) 

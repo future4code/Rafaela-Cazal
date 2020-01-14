@@ -5,19 +5,25 @@ import { connect } from "react-redux";
 import { push } from "connected-react-router";
 import { routes } from '../Router/index'
 
-const TripDetailsPage = props => {
-    return(
+class TripDetailsPage extends React.Component {
+
+    
+    render() {
+      return (
         <div>
-            <h1>candidatos de uma viagem para validação </h1>
-            <Button onClick={props.goToListTrips}>ir para Trips list </Button>
-        </div>
-    )
-}
+        <h1>candidatos de uma viagem para validação </h1>
+        <Button onClick={this.props.goToListTrips}>ir para Trips list </Button>
+        <Button onClick={this.props.goToHome}>ir para home </Button>
+    </div>
+      );
+    }
+  }
+
 
 function mapDispatchToProps(dispatch){
     return {
         goToListTrips: () => dispatch(push(routes.tripsList)),
-
+        goToHome: () => dispatch(push(routes.root)),
     }
 }
 

@@ -11,10 +11,12 @@ const HomePage = props => {
         console.log(props)
         return (
             <div>
-               <h1>WELCOME TO FUTUREX (home page)</h1>
+            <h1>FUTUREX (home page)</h1>
             <Button onClick={props.goToFormPage}>Form</Button> 
             <Button onClick={props.goToLoginPage}>Admin</Button> 
             <Button onClick={props.goToAboutPage}>About</Button> 
+            <Button onClick={props.goToListTripsPage}>List Trips</Button> 
+            <Button onClick={props.goToTripsDetailsPage}>Trips Details</Button> 
             </div>
 
         );
@@ -26,7 +28,8 @@ function mapDispatchToProps(dispatch) {
         goToFormPage: () => dispatch(push(routes.formPage)),
         goToLoginPage: () => dispatch(push(routes.loginAdmin)),
         goToAboutPage: () => dispatch(push(routes.aboutPage)),
-
+        goToListTripsPage: () => dispatch(push(routes.tripsList)),
+        goToTripsDetailsPage: () => dispatch(push(routes.tripsDetails)),
 
     }
 
