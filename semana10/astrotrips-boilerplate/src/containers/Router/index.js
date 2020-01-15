@@ -7,6 +7,7 @@ import ApplicationForm from '../ApplicationForm';
 import AboutPage from '../AboutPage';
 import ListTripsPage from '../ListTripsPage';
 import TripDetailsPage from '../TripDetailsPage';
+import CreateTrips from '../CreateTrips';
 
 
 export const routes = {
@@ -16,6 +17,7 @@ export const routes = {
   aboutPage: "/institutional",
   tripsList: "/trips/list",
   tripsDetails: "/trips/details",
+  createTrips: "create/trips",
 
 };
 
@@ -29,6 +31,7 @@ function Router(props) {
         <Route path={routes.aboutPage} component={AboutPage} exact />
         <Route path={routes.tripsList} component={ListTripsPage} exact />
         <Route path={routes.tripsDetails} component={TripDetailsPage} exact />
+        <Route path={routes.createTrips} component={CreateTrips} exact />
       </Switch>
     </ConnectedRouter>
   );

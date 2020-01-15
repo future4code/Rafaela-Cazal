@@ -12,7 +12,8 @@ class TripDetailsPage extends React.Component {
       return (
         <div>
         <h1>candidatos de uma viagem para validação </h1>
-        <Button onClick={this.props.goToListTrips}>ir para Trips list </Button>
+        <Button onClick={this.props.goToListTrips}>ir para lista de viagens </Button>
+        <Button onClick={this.props.goToCreateTrips}> criar viagens </Button>
         <Button onClick={this.props.goToHome}>ir para home </Button>
     </div>
       );
@@ -24,6 +25,7 @@ function mapDispatchToProps(dispatch){
     return {
         goToListTrips: () => dispatch(push(routes.tripsList)),
         goToHome: () => dispatch(push(routes.root)),
+        goToCreateTrips: () => dispatch(push(routes.createTrips)),
     }
 }
 

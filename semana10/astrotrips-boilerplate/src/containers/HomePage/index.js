@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
-import styled from "styled-components";
+// import styled from "styled-components";
 import { connect } from "react-redux";
 import { push } from "connected-react-router";
 import { routes } from '../Router/index'
@@ -17,6 +17,7 @@ const HomePage = props => {
             <Button onClick={props.goToAboutPage}>About</Button> 
             <Button onClick={props.goToListTripsPage}>List Trips</Button> 
             <Button onClick={props.goToTripsDetailsPage}>Trips Details</Button> 
+            <Button onClick={props.goToCreateTripsPage}>Create trips</Button>
             </div>
 
         );
@@ -30,6 +31,7 @@ function mapDispatchToProps(dispatch) {
         goToAboutPage: () => dispatch(push(routes.aboutPage)),
         goToListTripsPage: () => dispatch(push(routes.tripsList)),
         goToTripsDetailsPage: () => dispatch(push(routes.tripsDetails)),
+        goToCreateTripsPage: () => dispatch(push(routes.createTrips)),
 
     }
 
