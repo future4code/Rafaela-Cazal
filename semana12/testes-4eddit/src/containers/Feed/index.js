@@ -26,7 +26,7 @@ const feedForm = [
 ]
 
 
-class Feed extends Component {
+export class Feed extends Component {
   constructor(props) {
     super(props);
     this.state = {
