@@ -25,7 +25,7 @@ font-size: 12px;
 border-radius: 4px;
 `
 
-function Planner(){
+export function Planner(){
     return (
       <ContainerPlanner>
       </ContainerPlanner>

@@ -8,6 +8,16 @@ export const setAllTasks = (allTasks) => ({
     }
 })
 
+export const getAllTasks = () => async (dispatch) => {
+    try {
+        const response = await axios.get(`${baseURL}`)
+
+        dispatch(setAllTasks(response.data))
+    } catch(error) {
+        window.alert("Ocorreu um erro ao tentar acessar as suas tarefas.");
+    }
+} 
+
 export const createTask = (text, day) => async (dispatch) => {
     const taskData = {
         text,
@@ -22,17 +32,6 @@ export const createTask = (text, day) => async (dispatch) => {
         window.alert("Ocorreu um erro ao tentar criar uma nova tarefa.");
     }
 } 
-
-export const getAllTasks = () => async (dispatch) => {
-    try {
-        const response = await axios.get(`${baseURL}`)
-
-        dispatch(setAllTasks(response.data))
-    } catch(error) {
-        window.alert("Ocorreu um erro ao tentar acessar as suas tarefas.");
-    }
-} 
-
 
 
 

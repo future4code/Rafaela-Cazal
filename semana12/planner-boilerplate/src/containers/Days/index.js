@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { getAllTasks }  from '../../actions/tasks';
+import { allTasks } from '../../reducers/planner'
 import styled from 'styled-components';
 
 const ContainerDays = styled.div`
@@ -12,6 +13,7 @@ const ContainerDays = styled.div`
     padding: 10px;
     margin: 0 auto;
     text-align: justify;
+    box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.15);
     `
 const Title = styled.h2`
     margin-top: 100px;
@@ -34,7 +36,7 @@ render(){
             <ContainerDays>
             <h2>{day}</h2>
                 <ul>{
-                this.props.allTasks.filter(
+                  this.props.allTasks.filter(
                   task => task.day === day).map(
                   task => <li>{task.text}</li>
                   )}

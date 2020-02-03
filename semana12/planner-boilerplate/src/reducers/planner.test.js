@@ -1,17 +1,25 @@
-import { setAllTasks } from '../actions'
+import { setAllTasks } from "../actions/tasks";
+import planner from './planner'
 
-describe( "Teste do allTasks no reducer", () =>{
-    it("teste do array de todas as tarefas", () => {
-        const initialState = {
-            allTasks: []
+describe("Testa reducer planner", () => {
+    test('Testa action setAllTasks', () => {
+        const currentState = {
+            allTasks: [],
         }
 
-        const mockDeTeste: [{
-            id: 1,
-            text: 'tarefa',
-            day: 'Segunda'  
-        }]
+        const allTasksMock = [
+            {
+              "id": "jGH9xnVXQMeU3tZOQ2Gy",
+              "day": "Quarta",
+              "text": "Caminhar 1 hora"
+            }
+        ]
 
-        const expectedStore = 
-    });
-});
+        const action = setAllTasks(allTasksMock)
+
+        const newState = planner(currentState, action)
+
+        expect(newState.allTasks).toHaveLength(1)
+        expect(newState.allTasks[0].day).toEqual("Quarta")
+    })
+}) 
