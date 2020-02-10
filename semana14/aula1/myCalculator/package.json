@@ -1,0 +1,25 @@
+{
+  "name": "semana14",
+  "version": "1.0.0",
+  "description": "pasta para a atividade 1 - my calculator",
+  "main": "myCalculator.js",
+  "scripts": {
+    "start": "node myCalculator.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/future4code/Rafaela-Cazal.git"
+  },
+  "keywords": [
+    "calculator",
+    "js",
+    "node.js"
+  ],
+  "author": "Rafaela Cazal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/future4code/Rafaela-Cazal/issues"
+  },
+  "homepage": "https://github.com/future4code/Rafaela-Cazal#readme"
+}
