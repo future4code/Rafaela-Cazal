@@ -1,0 +1,18 @@
+{
+  "name": "tarefas",
+  "version": "1.0.0",
+  "description": "gestor de tarefas",
+  "main": "gestorDeTarefas.js",
+  "scripts": {
+    "start": "node gestorDeTarefas.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "tarefas",
+    "adc",
+    "tarefas",
+    "node.js"
+  ],
+  "author": "Rafaela Cazal",
+  "license": "ISC"
+}
