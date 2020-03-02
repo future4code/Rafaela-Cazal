@@ -1,0 +1,29 @@
+1. 
+-USE exercicios DESCRIBE actors;
+
+a)
+- select * from actors where first_name like 'A%'
+- select * from actors where last_name like 'A%'
+
+b) 
+- select last_name from actors where first_name like 'DAN%' or 'JULIA%'
+
+c)
+- select last_name from actors where first_name like 'ANGELINA%' OR '%b%'
+
+-----------------
+
+use `bouman-rafaela`;
+create table actors(
+id int primary key,
+first_name varchar(100) not null,
+last_name varchar(100) not null
+);
+insert into actors (id, first_name, last_name)
+values (01, 'Rafaela', 'Cazal');
+
+2. 
+
+USE exercicios;
+DESCRIBE films;
+
