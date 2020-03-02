@@ -1,0 +1,6 @@
+1. 
+- Client é uma interface;
+- Commerce é uma subclasse de Place;
+- Industry é uma subclasse de Place;
+- Residence é uma subclasse de Place;
+- Place é uma classe abstrata e pai das classes Commerce, Industry e Residence.
