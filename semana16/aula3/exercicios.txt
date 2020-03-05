@@ -1,0 +1,96 @@
+Exercício 1 
+
+CREATE TABLE usuarios (
+ id INT,
+ primeiro_nome VARCHAR(255),
+ ultimo_nome VARCHAR(255),
+ nacionalidade VARCHAR(255),
+ data_nascimento  DATE,
+ PRIMARY KEY (id)
+);
+
+CREATE TABLE autores (
+ id INT,
+ primeiro_nome VARCHAR(255),
+ ultimo_nome VARCHAR(255),
+ nacionalidade VARCHAR(255),
+ PRIMARY KEY (id)
+);
+
+CREATE TABLE editoras (
+ id INT,
+ nome VARCHAR(255),
+ cidade VARCHAR(255),
+ fundacao DATE,
+ PRIMARY KEY (id)
+);
+
+CREATE TABLE livros (
+ id INT,
+ titulo VARCHAR(255),
+ autor_id INT,
+ editora_id INT,
+ ano DATE,
+ PRIMARY KEY (id),
+ FOREIGN KEY (autor_id) REFERENCES autores(id),
+ FOREIGN KEY (editora_id) REFERENCES editoras(id)
+);
+
+CREATE TABLE usuarios_livros (
+    usuario_id INT,
+    livro_id INT,
+    PRIMARY KEY (usuario_id , livro_id),
+    FOREIGN KEY (usuario_id) REFERENCES usuários (id),
+    FOREIGN KEY (livro_id) REFERENCES livros (id)
+);
+
+
+
+EXERCICIO 2 - popular tabelas 
+
+INSERT INTO usuarios VALUES 
+    (1, "Rafaela","Cazal","brasileira", '1998-04-28'),
+    (2, "Fernanda","Cazal","brasileira", '1984-12-30'),
+    (3, "Eliana","Correa","brasileira", '1965-02-20'),
+    (4, "Manoel","Cazal","paraguaio", '1962-08-19');
+
+INSERT INTO usuarios_livros VALUES 
+    (1,2),
+    (1,3),
+    (1,4),
+    (1,12),
+    (2,2),
+    (2,10),
+    (2,87),
+    (3,12),
+    (3,62),
+    (3,87),
+    (4,51),
+    (4,53),
+    (4,54),
+    (4,12);
+
+
+
+EXERCICIO 3
+
+1. 
+SELECT autores.primeiro_nome, livros.titulo
+FROM autores
+JOIN livros
+ON autores.id = livros.autor_id
+WHERE autores.id = 4;
+
+2.
+SELECT autores.primeiro_nome, autores.ultimo_nome, livros.titulo
+FROM autores
+JOIN livros
+ON autores.id = livros.autor_id
+WHERE autores.primeiro_nome LIKE "A%"
+
+3.
+SELECT COUNT(*), autores.primeiro_nome FROM autores
+JOIN livros
+ON autores.id = livros.autor_id
+GROUP BY livros.autor_id; 
+
