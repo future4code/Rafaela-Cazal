@@ -3,26 +3,39 @@ import { User } from "../entities/user";
 
 
 export class EditUserUC {
-    constructor(private userDB: UserDB) {
-
-    public async execute(input: EditUserUCInput): Promise<EditUserOutput> {
-        const user = await this.userDB.getUserById(input.id)
+    constructor(private userDB: UserDB) {}
     
+    public async execute(input: EditUserUCInput): Promise<EditUserUCOutput> {
+        const user = await this.userDB.getUserById(input.id)
+
         if(!user){
             throw new Error('User not found')
         }
 
-        if(input.name !== undefined) {
-        
-        if(input.name === "" ){
-            throw new Error("Name not found")
+        if(input.name !== undefined){
+            if(input.name !== ""){
+                throw new Error("Invalid name")
+            }
 
+            user.setName(input.name)
         }
 
-        user: User.setName(input.name)
+        if(input.email !== undefined){
+            if(input.email.indexOf('@') === -1){
+                throw new Error("Invalid email")
+            }
+
+            user.setEmail(input.email)
+        }
+
+        await this.userDB.updateUser(user)
+
+        return{
+            message: "User updated successfully"
+        }
     }
-    
 }
+
 
 export interface EditUserUCInput {
     id: string,
@@ -30,6 +43,6 @@ export interface EditUserUCInput {
     email: string
 }
 
-export interface EditUserOutput {
+export interface EditUserUCOutput {
     message: string
 }

@@ -105,4 +105,10 @@ VALUES(
     );
   }
 
+  public async deleteUser(id: string): Promise<void>{
+    await this.connection.raw(
+      `DELETE FROM ${this.userTableName} WHERE id = '${id}'`
+    );
+  }
+
   }
