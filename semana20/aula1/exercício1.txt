@@ -1,0 +1,23 @@
+Exercício 1
+
+1. 
+- Criar ua intância no ec2
+- Escolher as definiçoes da márquina escolhida, como sistema operacional e região (a região default é a norte da Virgínia)
+- Gerar uma chave para nos conectar via terminar com a máquina criada 
+- Clonar o projeto naquela maquina 
+
+
+2. Escolhi o projeto 4eddit-bouman-8
+
+3. ssh -i ec2-igor-alves.pem ubuntu@3.85.11.48
+
+4, 5 e 6.
+ git clone https://github.com/future4code/4eddit-bouman-8.git - Clona o projeto para a máquina 
+   rm package-lock.json - exclui o pacote para instalar logo em seguida
+   npm i - instala dependencias necessárias anteriormente excluidas 
+   npm run build - builda o projeto para preparar o deploy
+   sudo apt install python - instala o python no projeto para o deploy simplificado
+   sudo python -mSimpleHTTPServer 80 - deploy do projeto na porta 80 (anywhere)
+
+
+7. A diferença está ao cloanr o projeto React na pasta do terminal e não criar diretamente no terminal como foi feito em aula
