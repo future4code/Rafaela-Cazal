@@ -1,0 +1,6 @@
+Exercício 2
+
+1, 2 e 3: Ok
+
+4.
+Aconteceram erros na hora de conectar o abnco de dados mas com um atendimento eu consegui resolver e criar um schema.

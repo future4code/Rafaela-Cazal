@@ -1,0 +1,24 @@
+a) entendi a função;
+
+b) message: "Missing input"; 
+
+c) message: "Missing input"; 
+
+d) message: "Missing email";
+
+e) message: "Invalid password";
+
+f) message: "User is correct";
+
+g) deve-se alterar o statusCode do if que verifica o email de 400 para statusCode: 422;
+
+h) 
+{
+    "user": {
+          "info": {
+              "name": "Astrodev",
+              "email": "astrodev@f4.com.br",
+              "password": "123456"
+          }
+    }
+  }
