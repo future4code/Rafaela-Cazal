@@ -1,0 +1,63 @@
+const knex = require("knex");
+const { v4 } = require("uuid")
+
+const connection = knex({
+  client: "mysql",
+  connection: {
+    host: process.env.HOST,
+    port: 3306,
+    user: process.env.USER,
+    password: process.env.PASSWORD,
+    database: process.env.DB
+  }
+});
+
+
+exports.handler = async event => {
+  const id = v4();
+
+  if (!event.character) {
+    return {
+      statusCode: 400,
+      body: JSON.stringify({ message: "Missing input" })
+    };
+  }
+
+  const newCharacter = {
+    id,
+    name: event.character.name,
+    cartoon: event.character.cartoon,
+    picture: event.character.picture
+  }
+
+  if(!newCharacter.name){
+    return {
+      status: 400,
+      response: "Missing name"
+    }
+  }
+
+  if(!newCharacter.cartoon){
+    return {
+      status: 400,
+      response: "Missing cartoon"
+    }
+  }
+
+  if(!newCharacter.picture){
+    return {
+      status: 400,
+      response: "Missing picture"
+    }
+  }
+
+  await connection.raw(`
+    INSERT INTO ${process.env.DB}.characters (id, name, cartoon, picture)
+    VALUES ('${newCharacter.id}','${newCharacter.name}','${newCharacter.cartoon}','${newCharacter.picture}');
+  `)
+
+  return {
+    status: 200,
+    response: "Character successfully added!"
+  }
+}
