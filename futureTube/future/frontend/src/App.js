@@ -1,13 +1,12 @@
-import React from 'react';
-import './style/global.css';
-import LoginPage from './components/LoginPage'
+import React from 'react'
+import Routes from './routes'
+import 'normalize.css';
 
-function App() {
+export default function App() {
+
   return (
-    <div className="App">
-       <LoginPage/>
-    </div>
-  ); 
+      <div> 
+      <Routes />
+      </div>
+  )
 }
-
-export default App;
