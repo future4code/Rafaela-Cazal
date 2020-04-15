@@ -1,24 +1,22 @@
 import React, { useState }  from 'react';
 import { useDispatch } from "react-redux";
-import { ChangerForm } from './style';
+import ChangePasswordForm from './style';
 
+export function ChangePassword(props) {
 
-export function ChangePassword() {
   const initialState = {
     oldPassword: '',
-    newPassword: ''
+    newPassword: '',
+    confirmNewPassword: '',
   }
 
   const [form, setForm] = useState(initialState)
-  
-  const dispatch = useDispatch();
-  
+  const dispatch = useDispatch()
 
   const handleChange = (event) => {
-
     const auxForm = { ...form };
-      auxForm[event.target.name] = event.target.value;
-        setForm(auxForm);
+    auxForm[event.target.name] = event.target.value;
+    setForm(auxForm);
   };
 
   const handleSubmit = (event) => {
@@ -27,14 +25,14 @@ export function ChangePassword() {
     setForm(initialState)
   };
 
-  return(
-    <>
-      <RegisterForm
-        oldPassword={form.oldPassword}
-        newPassword={form.newPassword}
-        onChange={handleChange}
-        onSubmit={handleSubmit}
-      />
-    </>
+  return (
+    <ChangePasswordForm
+    oldPassword={form.oldPassword}
+    newPassword={form.newPassword}
+    confirmNewPassword={form.confirmNewPassword}
+    onChange={handleChange}
+    onSubmit={handleSubmit}
+    />
+
   );
 } 

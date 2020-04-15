@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import VideoPage from '../VideoPage'
+
 
 const Container = styled.form`
-  height: 60vh;
+  height: 70vh;
   width: 25vw;
   min-width: 500px;
   font-family: Roboto, sans-serif;
@@ -14,14 +14,24 @@ const Container = styled.form`
   flex-direction: column;
   margin: 5vh auto 0 auto;
   margin-top: 10vh;
+  text-align: justify;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: justify;
 `
 
 const Header = styled.h2`
   margin-bottom: 40px;
   font-weight: 600;
+  margin-top: 40px;
+`
+const DateParagraph = styled.p`
+font-size: 12px;
+text-align: initial;
+width: 25vw;
+margin-bottom: 1px;
+margin-top: 2px;
+color: #666666;
 `
 
 const Input = styled.input`
@@ -44,6 +54,7 @@ const Input = styled.input`
 const Button = styled.button`
   width: 50%;
   height: 3em;
+  margin-top: 15px;
   border-radius: 4px;
   border: 1px solid rgba(230,230,230, 1);
   background: #ff602f;
@@ -62,6 +73,7 @@ const Button = styled.button`
 export function RegisterForm(props) {
   return(
     <Container onSubmit={props.onSubmit}>
+
       <Header>Obtenha acesso aos vídeos!</Header>
       <Input
         type='text'
@@ -76,6 +88,15 @@ export function RegisterForm(props) {
         placeholder='E-mail'
         onChange={props.onChange}
         value={props.email}
+      />
+      <DateParagraph>Data de nascimento</DateParagraph>
+      <Input
+        type='date'
+        name='birthDate'
+        label='Data de nascimento'
+        placeholder='Data de nascimento'
+        onChange={props.onChange}
+        value={props.birthDate}
       />
       <Input
         type='password'

@@ -56,7 +56,7 @@ margin-bottom: 80px;
     outline: none;
     width: 92%;
     color: #696969;
-    font: 400 20px Roboto, sans-serif;
+    font: 400 17px Roboto, sans-serif;
   }
 
 
@@ -118,7 +118,7 @@ export const Button = styled.button`
   margin-left: -60px;
 `
 
-export function LoginPageStyle() {
+export function LoginPageStyle(props) {
   async function handleLogin(e) {
     e.preventDefault()
   }
@@ -127,26 +127,31 @@ export function LoginPageStyle() {
     <LoginContainer>
       <SectionForm>
       <LogoImg src={logo} alt="Logo FutureTube" />
-        <Form onSubmit={handleLogin}>
+        <Form onSubmit={props.onSubmit}>
           <h1>Faça seu login</h1>
           <input 
-          placeholder="E-mail"
-            type="text"
-            // value={email}
+                 name='email'
+                 type="text"
+                 onChange={props.onChange}
+                 value={props.email}
+                 placeholder='E-mail'
           />
            <input
-            placeholder="Senha"
-            type="password"
-            // value={password}
+                   name='password'
+                   type="password"
+                   onChange={props.onChange}
+                   value={props.password}
+                   placeholder='Senha'
           />
-          <Button type="submit" to="/videos">Entrar</Button>
+
+          <Button type="submit" to="/feed">Entrar</Button>
 
           <Link className="firstLink"to="/register">
             <FiLogIn size={16} color="#ff602f" />
             Não tenho cadastro
           </Link>
 
-          <Link className="link" to='/changePassword'>
+          <Link className="link" to='/password'>
           <FiLogIn size={16} color="#ff602f" />
             Esqueci minha senha 
           </Link>

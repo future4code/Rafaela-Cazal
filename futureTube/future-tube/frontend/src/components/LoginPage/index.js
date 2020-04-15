@@ -5,7 +5,6 @@ import { LoginPageStyle } from './style';
 
 export function LoginPage() {
   const initialState = {
-    name: '',
     email: '',
     password: ''
   }

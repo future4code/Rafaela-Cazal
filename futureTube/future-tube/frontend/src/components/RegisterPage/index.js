@@ -1,12 +1,12 @@
 import React, { useState }  from 'react';
 import { useDispatch } from "react-redux";
 import { RegisterForm } from './style';
-import { VideoPage } from "../VideoPage";
 
 
 export function RegisterPage() {
   const initialState = {
     name: '',
+    birthDate: '',
     email: '',
     password: '',
   }
@@ -30,6 +30,8 @@ export function RegisterPage() {
   return(
     <>
       <RegisterForm
+        name={form.name}
+        birthDate={form.birthDate}
         email={form.email}
         password={form.password}
         onChange={handleChange}

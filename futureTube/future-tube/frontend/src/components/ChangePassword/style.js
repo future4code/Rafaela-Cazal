@@ -19,13 +19,22 @@ const Container = styled.form`
   justify-content: center;
 `
 
-const Header = styled.h2`
-  margin-bottom: 40px;
-  font-weight: 600;
-`
+const FormContainer = styled.form`
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: space-around; 
 
-const Input = styled.input`
-  width: 60%; 
+  h2 {
+    margin-bottom: 1vh;
+    margin-bottom: 40px;
+    font-weight: 600;
+  }
+
+ input {
+  width: 100%; 
   display: 'inline';
   height: 50px;
   padding: 0 10px;
@@ -38,11 +47,13 @@ const Input = styled.input`
   ::placeholder{
     text-align: left;
   }
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+ }
 `
 
+
 const Button = styled.button`
-  width: 50%;
+  width: 70%;
   height: 3em;
   border-radius: 4px;
   border: 1px solid rgba(230,230,230, 1);
@@ -59,32 +70,36 @@ const Button = styled.button`
   }
 `
 
-export function RegisterForm(props) {
+export default function ChangePasswordForm(props) {
   return(
-    <Container onSubmit={props.onSubmit}>
-      <Header>Obtenha acesso aos vídeos!</Header>
-      <Input
-        type='text'
-        name='name'
-        placeholder='Nome'
-        onChange={props.onChange}
-        value={props.name}
-      />
-      <Input
-        type='text'
-        name='email'
-        placeholder='E-mail'
-        onChange={props.onChange}
-        value={props.email}
-      />
-      <Input
-        type='password'
-        name='password'
-        placeholder='Senha'
-        onChange={props.onChange}
-        value={props.password}
-      />
-      <Button>Cadastrar</Button>
+    <Container >
+
+      <FormContainer onSubmit={props.onSubmit}>
+      <h2>Alterar senha</h2>
+        <input
+          name='oldPassword'
+          type="password"
+          onChange={props.onChange}
+          value={props.oldPassword}
+          placeholder='Senha antiga'
+        />
+        <input
+          name='newPassword'
+          type="password"
+          onChange={props.onChange}
+          value={props.newPassword}
+          placeholder='Nova senha'
+        />
+        <input
+          name='confirmNewPassword'
+          type="password"
+          onChange={props.onChange}
+          value={props.confirmNewPassword}
+          placeholder='Confirme sua nova senha'
+        />
+        <Button>Confirmar</Button>
+
+      </FormContainer>
     </Container>
   );
 } 
