@@ -1,17 +1,11 @@
 export default class User {
   constructor(
-    private id: string,
     private name: string,
     private email: string,
-    private birthDate: Date,
+    private birthDate: string,
     private picture: string,
     private password: string
   ) { }
-
-  public getId(): string {
-    return this.id;
-  }
-
   public getName(): string {
     return this.name;
   }
@@ -20,7 +14,7 @@ export default class User {
     return this.email;
   }
 
-  public getBirtDate(): Date {
+  public getBirtDate(): string {
     return this.birthDate
   }
 
@@ -30,10 +24,6 @@ export default class User {
 
   public getPassword(): string {
     return this.password;
-  }
-
-  public setId(id: string): void {
-    this.id = id;
   }
 
   public setName(name: string): void {

@@ -2,22 +2,19 @@ import * as functions from 'firebase-functions';
 import firebaseAdmin from 'firebase-admin';
 import firebase from 'firebase';
 import { AddressInfo } from 'net';
-import express from 'express';
-import cors from 'cors';
+import app from './presentation/index';
 
-const app = express();
-app.use(cors({ origin: true }), express.json());
 exports.app = functions.https.onRequest(app);
 
 const firebaseConfig = {
-    apiKey: process.env.API_KEY,
-    authDomain: process.env.AUTH_DOMAIN,
-    databaseURL: process.env.DB_URL,
-    projectId: process.env.PRJCT_ID,
-    storageBucket: process.env.BUCKET,
-    messagingSenderId: process.env.MSG_SENDER_ID,
-    appId: process.env.APP_ID
-  };
+  apiKey: "AIzaSyAQLekXOHxKvQer4vd06K39cjDTyjt7sXs",
+  authDomain: "lubetube-db4e7.firebaseapp.com",
+  databaseURL: "https://lubetube-db4e7.firebaseio.com",
+  projectId: "lubetube-db4e7",
+  storageBucket: "lubetube-db4e7.appspot.com",
+  messagingSenderId: "641103399691",
+  appId: "1:641103399691:web:1f5c980149ed4f8ec9300e"
+};
 
 firebaseAdmin.initializeApp(functions.config().firebase);
 firebase.initializeApp(firebaseConfig);
