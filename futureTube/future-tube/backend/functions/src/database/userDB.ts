@@ -30,6 +30,8 @@ export class UserDB extends BaseDB implements UserGateway {
         birthDate: user.getBirtDate(),
         picture: user.getPicture()
       })
+      
+      firebase.auth().currentUser?.sendEmailVerification()
 
       return userToken
 
