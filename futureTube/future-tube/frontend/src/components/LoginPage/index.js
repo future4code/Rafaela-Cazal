@@ -1,9 +1,11 @@
-import React, { useState, useContext } from 'react'
-import { useDispatch } from "react-redux";
+import React, { useState} from 'react'
+import { useDispatch} from "react-redux";
+import { autenticateLogin } from "../../actions/user";
 import { LoginPageStyle } from './style';
 
 
 export function LoginPage() {
+
   const initialState = {
     email: '',
     password: ''
@@ -20,8 +22,10 @@ export function LoginPage() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(form)
+
+    dispatch(autenticateLogin (form.email, form.password))
     setForm(initialState)
+
   };
 
   return(

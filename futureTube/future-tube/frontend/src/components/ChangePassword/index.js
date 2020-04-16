@@ -5,9 +5,7 @@ import ChangePasswordForm from './style';
 export function ChangePassword(props) {
 
   const initialState = {
-    oldPassword: '',
-    newPassword: '',
-    confirmNewPassword: '',
+    confirmEmail: '',
   }
 
   const [form, setForm] = useState(initialState)
@@ -27,9 +25,7 @@ export function ChangePassword(props) {
 
   return (
     <ChangePasswordForm
-    oldPassword={form.oldPassword}
-    newPassword={form.newPassword}
-    confirmNewPassword={form.confirmNewPassword}
+    confirmNewPassword={form.confirmEmail}
     onChange={handleChange}
     onSubmit={handleSubmit}
     />

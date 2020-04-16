@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 
 const Container = styled.form`
-  height: 70vh;
+  height: 80vh;
   width: 25vw;
   min-width: 500px;
   font-family: Roboto, sans-serif;
@@ -89,6 +89,13 @@ export function RegisterForm(props) {
         onChange={props.onChange}
         value={props.email}
       />
+       <Input
+        type='password'
+        name='password'
+        placeholder='Senha'
+        onChange={props.onChange}
+        value={props.password}
+      />
       <DateParagraph>Data de nascimento</DateParagraph>
       <Input
         type='date'
@@ -98,12 +105,12 @@ export function RegisterForm(props) {
         onChange={props.onChange}
         value={props.birthDate}
       />
-      <Input
-        type='password'
-        name='password'
-        placeholder='Senha'
+     <Input
+        type='picture'
+        name='picture'
+        placeholder='Url da sua foto'
         onChange={props.onChange}
-        value={props.password}
+        value={props.picture}
       />
       <Button>Cadastrar</Button>
     </Container>

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import 'normalize.css';
 import logo from '../../assets/BlackLogo.png';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { FiLogIn } from 'react-icons/fi';
 import VideoImg from '../../assets/undrawVideoiv.svg';
 
@@ -23,26 +23,42 @@ export const LoginContainer = styled.div`
   justify-content: space-between;
 `
 export const ImgLogin = styled.img`
-margin-right: 70px;
-margin-top: 100px;
-width: 600px; 
-
+  margin-right: 70px;
+  margin-top: 110px;
+  width: 600px;
 `
+
+export const LogoImg = styled.img`
+  width: 300px;
+  margin-left: -60px;
+  margin-top: -15px;
+`
+
+
+export const Cta = styled.p`
+  font-family: Roboto, sans-serif;
+  font-size: 19px;
+  font-weight: 500;
+  margin-top: -65px;
+  margin-left: 230px;
+  width: 600px;
+`
+
 export const SectionForm = styled.div`
   margin-left: 100px;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
   width: 100%;
   max-width: 300px; 
 `
 
 export const Form = styled.form`
-margin-top: 130px;
+margin-top: 160px;
 margin-bottom: 80px;
-  h1 {
+  h3 {
     color: black;
-    font-size: 32px;
+    font-size: 28px;
     font-family: Roboto, sans-serif;
-    margin-bottom: 32px;
+    margin-bottom: 20px;
     border-width: 3px;
   }
 
@@ -112,55 +128,48 @@ export const Button = styled.button`
     filter: brightness(98%);
   }`
 
-  export const LogoImg = styled.img`
-  width: 300px;
-  margin-top: -15px;
-  margin-left: -60px;
-`
 
 export function LoginPageStyle(props) {
-  async function handleLogin(e) {
-    e.preventDefault()
-  }
 
   return (
     <LoginContainer>
       <SectionForm>
-      <LogoImg src={logo} alt="Logo FutureTube" />
+        <LogoImg src={logo} alt="Logo FutureTube" />
+        <Cta>Assista as aulas gravadas da Labenu quando e onde estiver!</Cta>
         <Form onSubmit={props.onSubmit}>
-          <h1>Faça seu login</h1>
-          <input 
-                 name='email'
-                 type="text"
-                 onChange={props.onChange}
-                 value={props.email}
-                 placeholder='E-mail'
+          <h3>Faça seu login</h3>
+          <input
+            name='email'
+            type="text"
+            onChange={props.onChange}
+            value={props.email}
+            placeholder='E-mail'
           />
-           <input
-                   name='password'
-                   type="password"
-                   onChange={props.onChange}
-                   value={props.password}
-                   placeholder='Senha'
+          <input
+            name='password'
+            type="password"
+            onChange={props.onChange}
+            value={props.password}
+            placeholder='Senha'
           />
 
           <Button type="submit" to="/feed">Entrar</Button>
 
-          <Link className="firstLink"to="/register">
+          <Link className="firstLink" to="/register">
             <FiLogIn size={16} color="#ff602f" />
             Não tenho cadastro
           </Link>
 
           <Link className="link" to='/password'>
-          <FiLogIn size={16} color="#ff602f" />
-            Esqueci minha senha 
+            <FiLogIn size={16} color="#ff602f" />
+            Esqueci minha senha
           </Link>
 
         </Form>
       </SectionForm>
 
 
-      <ImgLogin src={VideoImg} alt="Onlinevideo"/>
+      <ImgLogin src={VideoImg} alt="Onlinevideo" />
     </LoginContainer>
   )
 

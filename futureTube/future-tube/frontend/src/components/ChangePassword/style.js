@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import VideoPage from '../VideoPage'
 
 const Container = styled.form`
-  height: 60vh;
+  height: 40vh;
   width: 25vw;
   min-width: 500px;
   font-family: Roboto, sans-serif;
@@ -47,7 +47,7 @@ const FormContainer = styled.form`
   ::placeholder{
     text-align: left;
   }
-  margin-bottom: 20px;
+  margin: 0 20px 20px 0;
  }
 `
 
@@ -71,32 +71,18 @@ const Button = styled.button`
 `
 
 export default function ChangePasswordForm(props) {
-  return(
+  return (
     <Container >
-
       <FormContainer onSubmit={props.onSubmit}>
-      <h2>Alterar senha</h2>
+        <h3>Confirme seu email abaixo para a redefinição de senha</h3>
         <input
-          name='oldPassword'
-          type="password"
+          name='confirmEmail'
+          type="email"
           onChange={props.onChange}
-          value={props.oldPassword}
-          placeholder='Senha antiga'
+          value={props.confirmEmail}
+          placeholder='E-mail de redefinição'
         />
-        <input
-          name='newPassword'
-          type="password"
-          onChange={props.onChange}
-          value={props.newPassword}
-          placeholder='Nova senha'
-        />
-        <input
-          name='confirmNewPassword'
-          type="password"
-          onChange={props.onChange}
-          value={props.confirmNewPassword}
-          placeholder='Confirme sua nova senha'
-        />
+
         <Button>Confirmar</Button>
 
       </FormContainer>
