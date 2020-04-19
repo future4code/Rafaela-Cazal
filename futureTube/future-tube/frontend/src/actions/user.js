@@ -14,13 +14,13 @@ export const autenticateLogin = (email, password) => async (dispatch) => {
 
     try {
         const response = await axios.post(`${BaseURL}/login`, loginInformation);
-        
+
         const userToken = response.data.token;
         window.localStorage.setItem("token", userToken);
-        
+
         dispatch(push(routes.feed))
 
-    } catch(error) {
+    } catch (error) {
         window.alert("Ocorreu um erro ao tentar fazer login.")
     }
 }
@@ -28,7 +28,7 @@ export const autenticateLogin = (email, password) => async (dispatch) => {
 
 export const createUser = (name, email, password, birthDate, picture) => async (dispatch) => {
     const registerInformation = {
-        name, 
+        name,
         email,
         password,
         birthDate,
@@ -39,33 +39,41 @@ export const createUser = (name, email, password, birthDate, picture) => async (
         const response = await axios.post(`${BaseURL}/signup`, registerInformation);
 
         const userToken = response.data.token;
-        window.localStorage.setItem("token", userToken); 
+        window.localStorage.setItem("token", userToken);
 
         dispatch(push(routes.root))
 
         window.alert("Cadastro realizado com sucesso!")
-    } catch(error) {
+    } catch (error) {
         window.alert("Ocorreu um erro ao tentar se cadastrar")
     }
 
 }
 
 
-    export const changePassword = (email) => async (dispatch) => {
-        const changeInformation = {
-            email
-        }
-
-        try {
-
-            await axios.post(`${BaseURL}/password`, changeInformation);
-            
-            window.alert("E-mail enviado. Acesse o link para redefinir sua senha.")
-
-            dispatch(push(routes.root))
-    
-        } catch(error) {
-            window.alert("Ocorreu um erro ao tentar enviar e-mail")
-        }
+export const changePassword = (email) => async (dispatch) => {
+    const changeInformation = {
+        email
     }
-    
+
+    try {
+
+        await axios.post(`${BaseURL}/password`, changeInformation);
+
+        window.alert("E-mail enviado. Acesse o link para redefinir sua senha.")
+
+        dispatch(push(routes.root))
+
+    } catch (error) {
+        window.alert("Ocorreu um erro ao tentar enviar e-mail")
+    }
+}
+
+
+export const logOut = () => async (dispatch) => {
+        window.localStorage.removeItem("token");
+        dispatch(push(routes.root))
+    }
+
+
+

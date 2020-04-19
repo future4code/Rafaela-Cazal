@@ -5,5 +5,5 @@ export interface UserGateway {
     login(email: string, password: string): Promise<string> 
     // getUserByEmail(email: string): Promise< User | undefined>
     // getUserById(id: string): Promise< User | undefined>
-    // changePassword(newPassword: string, userId: string): Promise<void>
+    changePassword(email: string): Promise<void>
 }

@@ -135,7 +135,7 @@ export function LoginPageStyle(props) {
     <LoginContainer>
       <SectionForm>
         <LogoImg src={logo} alt="Logo FutureTube" />
-        <Cta>Assista as aulas gravadas da Labenu quando e onde estiver!</Cta>
+        <Cta>Assista as aulas gravadas da Labenu quando e de onde estiver!</Cta>
         <Form onSubmit={props.onSubmit}>
           <h3>Faça seu login</h3>
           <input
@@ -153,7 +153,7 @@ export function LoginPageStyle(props) {
             placeholder='Senha'
           />
 
-          <Button type="submit" to="/feed">Entrar</Button>
+          <Button type="submit">Entrar</Button>
 
           <Link className="firstLink" to="/register">
             <FiLogIn size={16} color="#ff602f" />

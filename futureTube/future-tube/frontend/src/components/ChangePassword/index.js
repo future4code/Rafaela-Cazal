@@ -1,6 +1,7 @@
 import React, { useState }  from 'react';
 import { useDispatch } from "react-redux";
 import ChangePasswordForm from './style';
+import { changePassword } from '../../actions/user';
 
 export function ChangePassword(props) {
 
@@ -19,7 +20,7 @@ export function ChangePassword(props) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(form)
+    dispatch(changePassword(form))
     setForm(initialState)
   };
 

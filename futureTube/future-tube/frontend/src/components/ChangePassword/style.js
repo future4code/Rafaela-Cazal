@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import VideoPage from '../VideoPage'
+import VideoPage from '../Feed'
 
 const Container = styled.form`
   height: 40vh;

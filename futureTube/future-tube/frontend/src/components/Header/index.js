@@ -8,8 +8,16 @@ export const Header = styled.header`
     width: 98vw;
     height: 10vh;
     display: flex;
-    padding: 0 3vw 0 1vw;
+    padding: 0 5vw 0 1vw;
     align-items: center;
     justify-content: space-between;
     background-color: #dfdfdf;
 `;
+
+const logOut = () => {
+    localStorage.removeItem("token");
+    alert("Você foi deslogado")
+    this.props.goToLoginPage();
+  }
+
+  

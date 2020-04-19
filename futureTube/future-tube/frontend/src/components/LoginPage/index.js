@@ -1,5 +1,5 @@
-import React, { useState} from 'react'
-import { useDispatch} from "react-redux";
+import React, { useState } from 'react'
+import { useDispatch } from "react-redux";
 import { autenticateLogin } from "../../actions/user";
 import { LoginPageStyle } from './style';
 
@@ -11,8 +11,10 @@ export function LoginPage() {
     password: ''
   }
 
-  const [form, setForm] = useState(initialState)
-  const dispatch = useDispatch()
+  const [form, setForm] = useState(initialState);
+  const dispatch = useDispatch();
+  const token = window.localStorage.getItem("token");
+
 
   const handleChange = (event) => {
     const auxForm = { ...form };
@@ -22,13 +24,11 @@ export function LoginPage() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    dispatch(autenticateLogin (form.email, form.password))
+    dispatch(autenticateLogin(form))
     setForm(initialState)
-
   };
 
-  return(
+  return (
     <>
       <LoginPageStyle
         email={form.email}
@@ -38,4 +38,4 @@ export function LoginPage() {
       />
     </>
   );
-} 
+}

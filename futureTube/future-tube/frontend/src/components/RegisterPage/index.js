@@ -25,8 +25,7 @@ export function RegisterPage() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(form)
-    dispatch(createUser (form.name, form.email, form.password, form.birthDate, form.picture))
+    dispatch(createUser (form))
     setForm(initialState)
   };
 
