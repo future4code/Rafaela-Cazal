@@ -7,7 +7,7 @@ export const changePasswordEndpoint = async (req: Request, res: Response) => {
   try {
     const cpUC = new ChangePasswordUC(new UserDB());
 
-    await cpUC.execute({email: req.body.email});
+    await cpUC.execute({ email: req.body.email });
 
     res.status(200).send();
   } catch (err) {
@@ -17,4 +17,3 @@ export const changePasswordEndpoint = async (req: Request, res: Response) => {
     });
   }
 };
-  

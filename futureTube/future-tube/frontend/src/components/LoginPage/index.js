@@ -22,7 +22,7 @@ export function LoginPage() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    
+
     dispatch(autenticateLogin(form.email, form.password))
     setForm(initialState)
   };

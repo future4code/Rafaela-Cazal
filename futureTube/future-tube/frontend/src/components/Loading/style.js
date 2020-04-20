@@ -23,7 +23,7 @@ const Loader = styled.img`
 `
 
 export const LoadingPageStyle = () => (
-  <LoaderWrapper>
-    <Loader alt="Loader" src={LoadingGif}/>
-  </LoaderWrapper>
+    <LoaderWrapper>
+        <Loader alt="Loader" src={LoadingGif} />
+    </LoaderWrapper>
 )

@@ -1,4 +1,4 @@
-import React, { useState }  from 'react';
+import React, { useState } from 'react';
 import { useDispatch } from "react-redux";
 import ChangePasswordForm from './style';
 import { changePassword } from '../../actions/user';
@@ -26,9 +26,9 @@ export function ChangePassword(props) {
 
   return (
     <ChangePasswordForm
-    confirmEmail={form.confirmEmail}
-    onChange={handleChange}
-    onSubmit={handleSubmit}
+      confirmEmail={form.confirmEmail}
+      onChange={handleChange}
+      onSubmit={handleSubmit}
     />
 
   );

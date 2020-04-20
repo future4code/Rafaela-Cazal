@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-
 export const Header = styled.header`
     position: fixed;
     top: 0%;
@@ -18,4 +17,4 @@ const logOut = () => {
     localStorage.removeItem("token");
     alert("Você foi deslogado")
     this.props.goToLoginPage();
-  }
+}

@@ -72,7 +72,7 @@ const Button = styled.button`
 `
 
 export function RegisterForm(props) {
-  return(
+  return (
     <Container onSubmit={props.onSubmit}>
 
       <Header>Obtenha acesso aos vídeos!</Header>
@@ -90,7 +90,7 @@ export function RegisterForm(props) {
         onChange={props.onChange}
         value={props.email}
       />
-       <Input
+      <Input
         type='password'
         name='password'
         placeholder='Senha'
@@ -106,7 +106,7 @@ export function RegisterForm(props) {
         onChange={props.onChange}
         value={props.birthDate}
       />
-     <Input
+      <Input
         type='picture'
         name='picture'
         placeholder='Url da sua foto'
@@ -116,4 +116,5 @@ export function RegisterForm(props) {
       <Button>Cadastrar</Button>
     </Container>
   );
-} 
+}
+

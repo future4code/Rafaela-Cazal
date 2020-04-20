@@ -1,4 +1,4 @@
-import React, { useState }  from 'react';
+import React, { useState } from 'react';
 import { useDispatch } from "react-redux";
 import { RegisterForm } from './style';
 import { createUser } from '../../actions/user'
@@ -10,7 +10,7 @@ export function RegisterPage() {
     email: '',
     password: '',
     birthDate: '',
-    picture:''
+    picture: ''
   }
 
   const [form, setForm] = useState(initialState)
@@ -25,11 +25,11 @@ export function RegisterPage() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    dispatch(createUser (form.name, form.email, form.password, form.birthDate, form.picture))
+    dispatch(createUser(form.name, form.email, form.password, form.birthDate, form.picture))
     setForm(initialState)
   };
 
-  return(
+  return (
     <>
       <RegisterForm
         name={form.name}

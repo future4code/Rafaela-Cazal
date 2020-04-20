@@ -20,7 +20,7 @@ const store = createStore(generateReducers(history), compose(...middlewares));
 
 export const App = () => (
   <Provider store={store}>
-      <Router history={history} />
+    <Router history={history} />
   </Provider>
 );
 
