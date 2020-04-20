@@ -13,8 +13,6 @@ export function LoginPage() {
 
   const [form, setForm] = useState(initialState);
   const dispatch = useDispatch();
-  const token = window.localStorage.getItem("token");
-
 
   const handleChange = (event) => {
     const auxForm = { ...form };
@@ -24,18 +22,21 @@ export function LoginPage() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    dispatch(autenticateLogin(form))
+    
+    dispatch(autenticateLogin(form.email, form.password))
     setForm(initialState)
   };
 
   return (
     <>
+
       <LoginPageStyle
         email={form.email}
         password={form.password}
         onChange={handleChange}
         onSubmit={handleSubmit}
       />
+
     </>
   );
 }

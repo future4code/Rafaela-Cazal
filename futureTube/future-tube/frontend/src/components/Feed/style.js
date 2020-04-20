@@ -42,12 +42,6 @@ const Author = styled.p`
   color: grey;
 `
 
-const PostTime = styled.p`
-  font-size: 11px;
-  color: grey;
-  margin-top: 0;
-`
-
 export function VideoCardPage(props) {
     return (
       <>
@@ -56,7 +50,6 @@ export function VideoCardPage(props) {
             <Title> Aula 78 - Aws Lambda</Title>
             <Description> Aula sobre Aws Lambda</Description>
             <Author>Tutor: Lbn_Goli</Author>
-            <PostTime> há 5 dias </PostTime>
         </CardContainer>
        </>
     );

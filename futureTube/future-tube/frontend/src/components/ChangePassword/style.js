@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import VideoPage from '../Feed'
+
 
 const Container = styled.form`
-  height: 40vh;
+  height: 45vh;
   width: 25vw;
   min-width: 500px;
   font-family: Roboto, sans-serif;
@@ -27,10 +27,12 @@ const FormContainer = styled.form`
   align-items: center;
   justify-content: space-around; 
 
-  h2 {
+  h3 {
     margin-bottom: 1vh;
     margin-bottom: 40px;
     font-weight: 600;
+    width: 400px;
+    text-align: center;
   }
 
  input {
@@ -59,6 +61,7 @@ const Button = styled.button`
   border: 1px solid rgba(230,230,230, 1);
   background: #ff602f;
   color: white;
+  cursor: pointer;
   outline: none;
   font-size: 18px;
   font-family: Roboto, sans-serif;
@@ -66,7 +69,7 @@ const Button = styled.button`
   justify-content: center;
   transition: filter 0.2s;
   &:hover {
-    filter: brightness(98%);
+    filter: opacity(80%);
   }
 `
 
@@ -80,7 +83,7 @@ export default function ChangePasswordForm(props) {
           type="email"
           onChange={props.onChange}
           value={props.confirmEmail}
-          placeholder='E-mail de redefinição'
+          placeholder='E-mail'
         />
 
         <Button>Confirmar</Button>

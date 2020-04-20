@@ -125,7 +125,7 @@ export const Button = styled.button`
   justify-content: center;
   transition: filter 0.2s;
   &:hover {
-    filter: brightness(98%);
+    filter: opacity(80%);
   }`
 
 

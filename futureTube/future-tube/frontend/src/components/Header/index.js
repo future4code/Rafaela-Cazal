@@ -19,5 +19,3 @@ const logOut = () => {
     alert("Você foi deslogado")
     this.props.goToLoginPage();
   }
-
-  

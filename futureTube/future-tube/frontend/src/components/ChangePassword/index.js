@@ -20,13 +20,13 @@ export function ChangePassword(props) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    dispatch(changePassword(form))
+    dispatch(changePassword(form.confirmEmail))
     setForm(initialState)
   };
 
   return (
     <ChangePasswordForm
-    confirmNewPassword={form.confirmEmail}
+    confirmEmail={form.confirmEmail}
     onChange={handleChange}
     onSubmit={handleSubmit}
     />

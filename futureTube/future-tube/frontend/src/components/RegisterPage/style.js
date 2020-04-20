@@ -60,13 +60,14 @@ const Button = styled.button`
   background: #ff602f;
   color: white;
   outline: none;
+  cursor: pointer;
   font-size: 18px;
   font-family: Roboto, sans-serif;
   font-weight: 600;
   justify-content: center;
   transition: filter 0.2s;
   &:hover {
-    filter: brightness(98%);
+    filter: opacity(80%);
   }
 `
 
